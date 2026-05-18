@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-brand-red: #c0392b;
+  --color-brand-dark: #0e0e0e;
+  --color-brand-charcoal: #1c1c1c;
+  --color-brand-slate: #111111;
+  --color-brand-border: #1e1e1e;
+  --color-brand-muted: #555555;
+  --color-brand-sub: #888888;
+  --color-whatsapp: #25D366;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0e0e0e;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #c0392b;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 2px;
+    background-color: #c0392b;
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+    color: #ffffff;
+  }
+  .btn-primary {
+    background-color: #c0392b;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s;
+  }
+  .btn-primary:hover {
+    background-color: #a93226;
+  }
 }
