@@ -4,7 +4,7 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 const title = "GoldClass Chauffeur | NYC Black Car & Airport SUV Service";
 const description =
-  "Private black Cadillac Escalade chauffeur in New York City. JFK, LGA & EWR airport transfers, corporate rides, weddings and events across all five boroughs. Call or WhatsApp to book.";
+  "Private black Cadillac Escalade chauffeur with starlight roof in New York City. JFK, LGA & EWR airport transfers, corporate rides, weddings and events across all five boroughs. Call or WhatsApp to book.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

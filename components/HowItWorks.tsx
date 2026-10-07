@@ -7,7 +7,7 @@ import { staggerContainer, fadeUp } from '@/lib/animations'
 const steps = [
   { num: '01', title: 'Contact Us', desc: 'Call, WhatsApp, or email with your pickup location, destination, and preferred date and time.' },
   { num: '02', title: 'Get Confirmation', desc: 'Receive a quote and booking confirmation within minutes. No hidden fees, no surprises.' },
-  { num: '03', title: 'Ride in Style', desc: 'Abdul arrives early, every time. Sit back, relax — your transport is handled.' },
+  { num: '03', title: 'Ride in Style', desc: 'Your chauffeur arrives early, every time. Sit back, relax — your transport is handled.' },
 ]
 
 export default function HowItWorks() {

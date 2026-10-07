@@ -18,13 +18,13 @@ export default function About() {
             <div style={{ position: 'relative', overflow: 'hidden', backgroundColor: '#1c1c1c', aspectRatio: '4/5' }}>
               <img
                 src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80"
-                alt="Abdul Rehman — Professional Driver"
+                alt="GoldClass Chauffeur — professional driver at the wheel"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
               <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '4px', backgroundColor: '#c0392b' }} />
               <div style={{ position: 'absolute', bottom: '1.25rem', left: '1.25rem' }}>
-                <div style={{ color: '#c0392b', fontSize: '9px', letterSpacing: '3px', textTransform: 'uppercase' }}>Professional Driver</div>
-                <div style={{ color: '#fff', fontSize: '1.25rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '-0.02em', marginTop: '2px' }}>Abdul Rehman</div>
+                <div style={{ color: '#c0392b', fontSize: '9px', letterSpacing: '3px', textTransform: 'uppercase' }}>Professional Chauffeur</div>
+                <div style={{ color: '#fff', fontSize: '1.25rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '-0.02em', marginTop: '2px' }}>GoldClass Chauffeur</div>
               </div>
             </div>
           </motion.div>
@@ -33,7 +33,7 @@ export default function About() {
             <div style={{ color: '#c0392b', fontSize: '10px', letterSpacing: '4px', textTransform: 'uppercase', marginBottom: '1rem' }}>10+ Years NYC Experience</div>
             <h2 className="section-title" style={{ marginBottom: '1.5rem' }}>Your Driver,<br />Not Just a Car</h2>
             <p style={{ color: '#888', fontSize: '14px', lineHeight: 1.9, marginBottom: '1rem' }}>
-              Abdul Rehman has been navigating New York City&apos;s streets for over a decade, providing reliable,
+              Our chauffeur has been navigating New York City&apos;s streets for over a decade, providing reliable,
               professional transportation to clients who demand the best. From JFK to Manhattan galas —
               punctuality is personal.
             </p>

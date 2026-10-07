@@ -7,4 +7,4 @@ export const SITE_URL =
 
 export const SITE_NAME = 'GoldClass Chauffeur'
 export const PHONE = '+13476352412'
-export const WHATSAPP_URL = `https://wa.me/${PHONE.slice(1)}?text=Hi%20Abdul%2C%20I%27d%20like%20to%20book%20a%20ride`
+export const WHATSAPP_URL = `https://wa.me/${PHONE.slice(1)}?text=Hi%2C%20I%27d%20like%20to%20book%20a%20ride%20with%20GoldClass%20Chauffeur`

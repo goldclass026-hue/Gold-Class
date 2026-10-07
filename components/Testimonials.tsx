@@ -5,8 +5,8 @@ import { motion, useInView } from 'framer-motion'
 import { staggerContainer, scaleIn } from '@/lib/animations'
 
 const testimonials = [
-  { quote: 'Abdul is always on time — I trust him for every JFK trip. Clean car, no fuss, professional every time.', author: 'James R.', role: 'Corporate Client · Manhattan' },
-  { quote: "Booked him for my daughter's prom. He showed up 20 minutes early in a spotless Escalade. Highly recommend.", author: 'Maria G.', role: 'Event Client · Brooklyn' },
+  { quote: 'GoldClass is always on time — I trust them for every JFK trip. Clean car, no fuss, professional every time.', author: 'James R.', role: 'Corporate Client · Manhattan' },
+  { quote: "Booked GoldClass for my daughter's prom. The driver showed up 20 minutes early in a spotless Escalade. Highly recommend.", author: 'Maria G.', role: 'Event Client · Brooklyn' },
   { quote: "Best driver in NYC, period. I've used many services — none compare to the reliability of GoldClass.", author: 'David K.', role: 'Frequent Rider · Queens' },
 ]
 

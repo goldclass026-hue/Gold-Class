@@ -2,7 +2,7 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Wind, Wifi, Plug, Briefcase } from 'lucide-react'
+import { Wind, Wifi, Plug, Briefcase, Sparkles } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { staggerContainer, scaleIn, fadeUp } from '@/lib/animations'
 
@@ -16,6 +16,7 @@ const gallery = [
 ]
 
 const features: Feature[] = [
+  { icon: Sparkles, name: 'Starlight Roof' },
   { icon: Wind, name: 'Climate Control' },
   { icon: Wifi, name: 'Free WiFi' },
   { icon: Plug, name: 'USB Charging' },
@@ -77,6 +78,25 @@ export default function Fleet() {
               <span style={{ fontSize: '11px', color: '#888', textTransform: 'uppercase', letterSpacing: '1px' }}>{name}</span>
             </motion.div>
           ))}
+        </motion.div>
+
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', marginTop: '1px', backgroundColor: '#0a0d12', border: '1px solid #1e1e1e' }}
+        >
+          <div style={{ aspectRatio: '4/5', maxHeight: '32rem', width: '100%', overflow: 'hidden' }}>
+            <img src="/images/starlight-headliner.jpg" alt="Starlight headliner — fiber-optic star lights across the ceiling" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          </div>
+          <div style={{ padding: 'clamp(2rem, 6vw, 3.5rem)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <div className="section-label" style={{ marginBottom: '1rem' }}>Starlight Headliner</div>
+            <h3 className="section-title" style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', marginBottom: '1.25rem' }}>Ride Under<br />The Stars</h3>
+            <p style={{ color: '#999', fontSize: '14px', lineHeight: 1.8, maxWidth: '26rem' }}>
+              Hundreds of fiber-optic star lights glow across the ceiling — a touch usually reserved for ultra-luxury cars.
+              Perfect for proms, weddings, anniversaries and late-night rides through the city.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>
