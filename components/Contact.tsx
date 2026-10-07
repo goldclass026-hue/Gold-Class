@@ -4,17 +4,16 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Phone } from 'lucide-react'
 import { slideInLeft, slideInRight } from '@/lib/animations'
+import { PHONE, WHATSAPP_URL } from '@/lib/site'
 
-const PHONE = '+13476352412'
 const EMAIL = 'goldclasschauffeur@email.com'
-const WA_URL = `https://wa.me/${PHONE.replace('+', '')}?text=Hi%20Abdul%2C%20I%27d%20like%20to%20book%20a%20ride`
 
 const inputStyle: React.CSSProperties = {
   width: '100%',
   backgroundColor: '#1c1c1c',
   border: '1px solid #1e1e1e',
   color: '#fff',
-  fontSize: '13px',
+  fontSize: '16px',
   padding: '0.875rem 1rem',
   outline: 'none',
   fontFamily: 'inherit',
@@ -33,12 +32,12 @@ export default function Contact() {
   const inView = useInView(ref, { once: true, margin: '-10% 0px' })
 
   return (
-    <section id="contact" ref={ref} style={{ backgroundColor: '#111111', padding: '6rem 2.5rem' }}>
+    <section id="contact" ref={ref} style={{ backgroundColor: '#111111', padding: 'clamp(4rem, 12vw, 6rem) var(--gutter)' }}>
       <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
         <div className="section-label" style={{ marginBottom: '1rem' }}>Contact</div>
         <h2 className="section-title" style={{ marginBottom: '3rem' }}>Book Your<br />Ride Today</h2>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '4rem' }}>
           <motion.div variants={slideInLeft} initial="hidden" animate={inView ? 'visible' : 'hidden'} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <a href={`tel:${PHONE}`} style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', backgroundColor: '#1c1c1c', border: '1px solid #1e1e1e', padding: '1.5rem', textDecoration: 'none', transition: 'border-color 0.2s' }}
               onMouseEnter={e => (e.currentTarget.style.borderColor = '#c0392b')}
@@ -50,7 +49,7 @@ export default function Contact() {
               </div>
             </a>
 
-            <a href={WA_URL} target="_blank" rel="noopener noreferrer"
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
               style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', backgroundColor: 'rgba(37,211,102,0.08)', border: '1px solid rgba(37,211,102,0.25)', padding: '1.5rem', textDecoration: 'none', transition: 'background-color 0.2s' }}
               onMouseEnter={e => (e.currentTarget.style.backgroundColor = 'rgba(37,211,102,0.16)')}
               onMouseLeave={e => (e.currentTarget.style.backgroundColor = 'rgba(37,211,102,0.08)')}>
@@ -68,11 +67,11 @@ export default function Contact() {
           </motion.div>
 
           <motion.form variants={slideInRight} initial="hidden" animate={inView ? 'visible' : 'hidden'} onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
-              <input style={inputStyle} name="name" placeholder="Your Name" required />
-              <input style={inputStyle} name="phone" placeholder="Phone Number" />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))', gap: '0.75rem' }}>
+              <input style={inputStyle} name="name" autoComplete="name" placeholder="Your Name" required />
+              <input style={inputStyle} name="phone" type="tel" autoComplete="tel" placeholder="Phone Number" />
             </div>
-            <input style={inputStyle} name="pickup" placeholder="Pickup Location" required />
+            <input style={inputStyle} name="pickup" autoComplete="street-address" placeholder="Pickup Location" required />
             <input style={inputStyle} name="destination" placeholder="Destination" required />
             <input style={inputStyle} name="datetime" placeholder="Date & Time" required />
             <textarea style={{ ...inputStyle, height: '7rem', resize: 'none' }} name="notes" placeholder="Additional notes (flight number, passengers, luggage...)" />

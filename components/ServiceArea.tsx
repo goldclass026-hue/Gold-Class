@@ -20,12 +20,12 @@ export default function ServiceArea() {
   const inView = useInView(ref, { once: true, margin: '-10% 0px' })
 
   return (
-    <section id="area" ref={ref} style={{ backgroundColor: '#0e0e0e', padding: '6rem 2.5rem' }}>
+    <section id="area" ref={ref} style={{ backgroundColor: '#0e0e0e', padding: 'clamp(4rem, 12vw, 6rem) var(--gutter)' }}>
       <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
         <div className="section-label" style={{ marginBottom: '1rem' }}>Service Area</div>
         <h2 className="section-title" style={{ marginBottom: '3rem' }}>We Cover<br />All of NYC</h2>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '4rem', alignItems: 'center' }}>
           <motion.div
             variants={slideInLeft}
             initial="hidden"

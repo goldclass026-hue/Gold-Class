@@ -33,7 +33,7 @@ export default function Navbar() {
           borderBottom: scrolled ? '1px solid #1e1e1e' : '1px solid transparent',
         }}
       >
-        <div style={{ maxWidth: '80rem', margin: '0 auto', padding: '1rem 2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <div style={{ maxWidth: '80rem', margin: '0 auto', padding: '1rem var(--gutter)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <a href="#" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
             <span style={{ fontSize: '1.25rem', fontWeight: 900, letterSpacing: '-0.02em' }}>
               <span style={{ color: '#fff' }}>GOLD</span>
@@ -42,7 +42,7 @@ export default function Navbar() {
             <span style={{ fontSize: '8px', color: '#555', letterSpacing: '3px', textTransform: 'uppercase', marginTop: '2px' }}>Chauffeur · NYC</span>
           </a>
 
-          <ul className="hidden md:flex" style={{ listStyle: 'none', display: 'flex', gap: '2rem', alignItems: 'center' }}>
+          <ul className="hidden md:flex" style={{ listStyle: 'none', gap: '2rem', alignItems: 'center' }}>
             {links.map((l) => (
               <li key={l.label}>
                 <a href={l.href} style={{ fontSize: '11px', color: '#888', letterSpacing: '2px', textTransform: 'uppercase', textDecoration: 'none' }}
@@ -58,7 +58,7 @@ export default function Navbar() {
 
           <button
             className="md:hidden"
-            style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer' }}
+            style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', width: '44px', height: '44px', marginRight: '-10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
             onClick={() => setOpen(v => !v)}
             aria-label="Toggle menu"
           >

@@ -1,23 +1,26 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
+
+const title = "GoldClass Chauffeur | NYC Black Car & Airport SUV Service";
+const description =
+  "Private black Cadillac Escalade chauffeur in New York City. JFK, LGA & EWR airport transfers, corporate rides, weddings and events across all five boroughs. Call or WhatsApp to book.";
 
 export const metadata: Metadata = {
-  title: "GoldClass Chauffeur | Luxury Suburban SUV Service in NYC",
-  description:
-    "Premium black car service in New York City. Book Abdul Rehman for airport transfers, corporate rides, events, and more — in a Chevrolet Suburban SUV.",
-  keywords: [
-    "NYC black car service",
-    "luxury SUV transport New York",
-    "airport transfer NYC",
-    "Suburban limousine NYC",
-    "corporate car service Manhattan",
-  ],
+  metadataBase: new URL(SITE_URL),
+  title,
+  description,
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "GoldClass Chauffeur | Luxury Suburban SUV Service in NYC",
-    description:
-      "Premium black car service in New York City. Book airport transfers, corporate rides, events & more.",
+    title,
+    description,
+    url: "/",
+    siteName: SITE_NAME,
+    locale: "en_US",
     type: "website",
+    images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: "Black Cadillac Escalade — GoldClass Chauffeur NYC" }],
   },
+  twitter: { card: "summary_large_image", title, description, images: ["/images/og.jpg"] },
 };
 
 export default function RootLayout({

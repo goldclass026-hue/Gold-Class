@@ -22,7 +22,7 @@ export default function Services() {
   const inView = useInView(ref, { once: true, margin: '-10% 0px' })
 
   return (
-    <section id="services" ref={ref} style={{ backgroundColor: '#111111', padding: '6rem 2.5rem' }}>
+    <section id="services" ref={ref} style={{ backgroundColor: '#111111', padding: 'clamp(4rem, 12vw, 6rem) var(--gutter)' }}>
       <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
         <div className="section-label" style={{ marginBottom: '1rem' }}>Services</div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3rem', flexWrap: 'wrap', gap: '1rem' }}>
@@ -34,7 +34,7 @@ export default function Services() {
           variants={staggerContainer}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-          style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1px', backgroundColor: '#1e1e1e' }}
+          style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: '1px', backgroundColor: '#1e1e1e' }}
         >
           {services.map(({ icon: Icon, name, desc }) => (
             <motion.div
@@ -55,7 +55,7 @@ export default function Services() {
               <div className="hover-bar" style={{ position: 'absolute', left: 0, top: 0, width: '2px', height: 0, backgroundColor: '#c0392b', transition: 'height 0.3s' }} />
               <Icon size={28} color="#c0392b" style={{ marginBottom: '1.25rem' }} />
               <h3 style={{ fontSize: '13px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '2px', color: '#fff', marginBottom: '0.5rem' }}>{name}</h3>
-              <p style={{ fontSize: '12px', color: '#555', lineHeight: 1.8 }}>{desc}</p>
+              <p style={{ fontSize: '14px', color: '#999', lineHeight: 1.7 }}>{desc}</p>
               <div style={{ marginTop: '1.25rem', color: '#c0392b', fontSize: '1.125rem' }}>→</div>
             </motion.div>
           ))}

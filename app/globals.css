@@ -11,14 +11,26 @@
   --color-whatsapp: #25D366;
 }
 
+:root {
+  --gutter: clamp(1rem, 5vw, 2.5rem);
+}
+
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   background-color: #0e0e0e;
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* room for the sticky mobile call bar */
+@media (max-width: 767px) {
+  body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
 }
 
 @layer components {
@@ -64,4 +76,9 @@ body {
   .btn-primary:hover {
     background-color: #a93226;
   }
+}
+
+.fleet-hero { aspect-ratio: 16 / 7; }
+@media (max-width: 767px) {
+  .fleet-hero { aspect-ratio: 4 / 3; }
 }

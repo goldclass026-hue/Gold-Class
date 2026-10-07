@@ -45,7 +45,7 @@ function Counter({ end, suffix, label }: Stat) {
 export default function Stats() {
   return (
     <section style={{ backgroundColor: '#111', borderTop: '1px solid #1e1e1e', borderBottom: '1px solid #1e1e1e' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))' }}>
         {stats.map(s => <Counter key={s.label} {...s} />)}
       </div>
     </section>

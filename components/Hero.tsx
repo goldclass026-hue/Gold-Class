@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Phone } from 'lucide-react'
+import { PHONE, WHATSAPP_URL } from '@/lib/site'
 import { clipReveal, staggerContainer } from '@/lib/animations'
 
 const words = ['Elite', 'Luxury', 'Transport']
@@ -11,6 +12,7 @@ export default function Hero() {
     <section style={{ position: 'relative', minHeight: '100svh', display: 'flex', flexDirection: 'column', justifyContent: 'center', overflow: 'hidden', backgroundColor: '#0e0e0e' }}>
       <img
         src="/images/escalade-night.jpg"
+        fetchPriority="high"
         alt=""
         aria-hidden
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 65%', opacity: 0.2 }}
@@ -21,15 +23,15 @@ export default function Hero() {
         NYC
       </span>
 
-      <div style={{ position: 'relative', zIndex: 10, maxWidth: '80rem', margin: '0 auto', padding: '7rem 2.5rem 5rem' }}>
-        <motion.p
+      <div style={{ position: 'relative', zIndex: 10, maxWidth: '80rem', margin: '0 auto', padding: '7rem var(--gutter) 5rem' }}>
+        <motion.h1
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           style={{ color: '#c0392b', fontSize: '10px', letterSpacing: '5px', textTransform: 'uppercase', fontWeight: 500, marginBottom: '1.5rem' }}
         >
-          New York City&apos;s Premier SUV Service
-        </motion.p>
+          NYC Black Car &amp; Airport Chauffeur Service
+        </motion.h1>
 
         <motion.div variants={staggerContainer} initial="hidden" animate="visible" style={{ display: 'flex', flexDirection: 'column' }}>
           {words.map((word) => (
@@ -38,11 +40,11 @@ export default function Hero() {
                 variants={clipReveal}
                 style={{
                   display: 'block',
-                  fontSize: 'clamp(52px,10vw,110px)',
+                  fontSize: 'clamp(40px,10vw,110px)',
                   fontWeight: 900,
                   textTransform: 'uppercase',
                   lineHeight: 0.92,
-                  letterSpacing: '-3px',
+                  letterSpacing: '-0.03em',
                   color: word === 'Luxury' ? '#c0392b' : '#ffffff',
                 }}
               >
@@ -58,24 +60,24 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 1.2 }}
           style={{ marginTop: '1.5rem', color: '#888', fontSize: '14px', lineHeight: 1.7, maxWidth: '28rem' }}
         >
-          Professional Suburban SUV service across all five boroughs. Punctual, polished, and personal — every ride.
+          Professional Cadillac Escalade service across all five boroughs. Punctual, polished, and personal — every ride.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1.4 }}
-          style={{ marginTop: '2.5rem', display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}
+          style={{ marginTop: '2.5rem', display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center', maxWidth: '32rem' }}
         >
-          <a href="tel:+13476352412" className="btn-primary">
+          <a href={`tel:${PHONE}`} className="btn-primary" style={{ flex: '1 1 220px', justifyContent: 'center' }}>
             <Phone size={14} />
             Call to Book
           </a>
           <a
-            href="https://wa.me/13476352412?text=Hi%20Abdul%2C%20I%27d%20like%20to%20book%20a%20ride"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', border: '1px solid #25D366', color: '#25D366', padding: '1rem 2rem', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', fontWeight: 600, textDecoration: 'none', transition: 'background-color 0.2s' }}
+            style={{ flex: '1 1 220px', justifyContent: 'center', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', border: '1px solid #25D366', color: '#25D366', padding: '1rem 2rem', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', fontWeight: 600, textDecoration: 'none', transition: 'background-color 0.2s' }}
             onMouseEnter={e => (e.currentTarget.style.backgroundColor = 'rgba(37,211,102,0.1)')}
             onMouseLeave={e => (e.currentTarget.style.backgroundColor = 'transparent')}
           >

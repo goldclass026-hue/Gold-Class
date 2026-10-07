@@ -15,7 +15,7 @@ export default function HowItWorks() {
   const inView = useInView(ref, { once: true, margin: '-10% 0px' })
 
   return (
-    <section ref={ref} style={{ backgroundColor: '#111111', padding: '6rem 2.5rem' }}>
+    <section ref={ref} style={{ backgroundColor: '#111111', padding: 'clamp(4rem, 12vw, 6rem) var(--gutter)' }}>
       <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
         <div className="section-label" style={{ marginBottom: '1rem' }}>How It Works</div>
         <h2 className="section-title" style={{ marginBottom: '4rem' }}>Three Steps.<br />That&apos;s All.</h2>
@@ -24,13 +24,13 @@ export default function HowItWorks() {
           variants={staggerContainer}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-          style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '3rem' }}
+          style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: '3rem' }}
         >
           {steps.map(({ num, title, desc }) => (
             <motion.div key={num} variants={fadeUp}>
               <div style={{ fontSize: '80px', fontWeight: 900, color: 'rgba(192,57,43,0.1)', lineHeight: 1, marginBottom: '-16px', userSelect: 'none' }}>{num}</div>
               <h3 style={{ fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '2px', color: '#fff', marginBottom: '0.75rem' }}>{title}</h3>
-              <p style={{ fontSize: '13px', color: '#555', lineHeight: 1.8 }}>{desc}</p>
+              <p style={{ fontSize: '14px', color: '#999', lineHeight: 1.7 }}>{desc}</p>
             </motion.div>
           ))}
         </motion.div>

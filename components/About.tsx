@@ -10,10 +10,10 @@ export default function About() {
   const inView = useInView(ref, { once: true, margin: '-15% 0px' })
 
   return (
-    <section id="about" ref={ref} style={{ backgroundColor: '#0e0e0e', padding: '6rem 2.5rem' }}>
+    <section id="about" ref={ref} style={{ backgroundColor: '#0e0e0e', padding: 'clamp(4rem, 12vw, 6rem) var(--gutter)' }}>
       <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
         <div className="section-label" style={{ marginBottom: '1rem' }}>About</div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '4rem', alignItems: 'center' }}>
           <motion.div variants={slideInLeft} initial="hidden" animate={inView ? 'visible' : 'hidden'}>
             <div style={{ position: 'relative', overflow: 'hidden', backgroundColor: '#1c1c1c', aspectRatio: '4/5' }}>
               <img
@@ -38,7 +38,7 @@ export default function About() {
               punctuality is personal.
             </p>
             <p style={{ color: '#888', fontSize: '14px', lineHeight: 1.9, marginBottom: '2rem' }}>
-              Every ride in the GoldClass Suburban is a seamless, private experience — clean vehicle,
+              Every ride in the GoldClass Escalade is a seamless, private experience — clean vehicle,
               no surprises, always on time.
             </p>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', border: '1px solid #1e1e1e', padding: '0.75rem 1rem' }}>
