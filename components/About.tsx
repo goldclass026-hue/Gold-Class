@@ -38,7 +38,7 @@ export default function About() {
               punctuality is personal.
             </p>
             <p style={{ color: '#888', fontSize: '14px', lineHeight: 1.9, marginBottom: '2rem' }}>
-              Every ride in the GoldStar Suburban is a seamless, private experience — clean vehicle,
+              Every ride in the GoldClass Suburban is a seamless, private experience — clean vehicle,
               no surprises, always on time.
             </p>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', border: '1px solid #1e1e1e', padding: '0.75rem 1rem' }}>

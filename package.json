@@ -1,11 +1,11 @@
 {
-  "name": "goldstar-transport",
+  "name": "goldclass-chauffeur",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "npx serve@latest out"
   },
   "dependencies": {
     "framer-motion": "^12.39.0",

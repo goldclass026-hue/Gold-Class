@@ -37,9 +37,9 @@ export default function Navbar() {
           <a href="#" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
             <span style={{ fontSize: '1.25rem', fontWeight: 900, letterSpacing: '-0.02em' }}>
               <span style={{ color: '#fff' }}>GOLD</span>
-              <span style={{ color: '#c0392b' }}>STAR</span>
+              <span style={{ color: '#c0392b' }}>CLASS</span>
             </span>
-            <span style={{ fontSize: '8px', color: '#555', letterSpacing: '3px', textTransform: 'uppercase', marginTop: '2px' }}>Transport · NYC</span>
+            <span style={{ fontSize: '8px', color: '#555', letterSpacing: '3px', textTransform: 'uppercase', marginTop: '2px' }}>Chauffeur · NYC</span>
           </a>
 
           <ul className="hidden md:flex" style={{ listStyle: 'none', display: 'flex', gap: '2rem', alignItems: 'center' }}>

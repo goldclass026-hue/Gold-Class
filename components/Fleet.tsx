@@ -32,8 +32,8 @@ export default function Fleet() {
           style={{ position: 'relative', width: '100%', aspectRatio: '16/7', overflow: 'hidden', backgroundColor: '#1c1c1c', border: '1px solid #1e1e1e' }}
         >
           <img
-            src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=1600&q=80"
-            alt="Chevrolet Suburban SUV"
+            src="/images/escalade-street.jpg"
+            alt="Black Cadillac Escalade"
             style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }}
           />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(14,14,14,0.8), transparent)' }} />

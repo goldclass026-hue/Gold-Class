@@ -5,8 +5,8 @@ import { motion, useInView } from 'framer-motion'
 import { Phone } from 'lucide-react'
 import { slideInLeft, slideInRight } from '@/lib/animations'
 
-const PHONE = '+19170000000'
-const EMAIL = 'goldstartransport@email.com'
+const PHONE = '+13476352412'
+const EMAIL = 'goldclasschauffeur@email.com'
 const WA_URL = `https://wa.me/${PHONE.replace('+', '')}?text=Hi%20Abdul%2C%20I%27d%20like%20to%20book%20a%20ride`
 
 const inputStyle: React.CSSProperties = {
@@ -46,7 +46,7 @@ export default function Contact() {
               <Phone size={22} color="#c0392b" style={{ flexShrink: 0 }} />
               <div>
                 <div style={{ fontSize: '9px', color: '#555', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '4px' }}>Call Direct</div>
-                <div style={{ color: '#fff', fontSize: '1.25rem', fontWeight: 700 }}>+1 (917) 000-0000</div>
+                <div style={{ color: '#fff', fontSize: '1.25rem', fontWeight: 700 }}>+1 (347) 635-2412</div>
               </div>
             </a>
 

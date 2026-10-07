@@ -7,7 +7,7 @@ import { staggerContainer, scaleIn } from '@/lib/animations'
 const testimonials = [
   { quote: 'Abdul is always on time — I trust him for every JFK trip. Clean car, no fuss, professional every time.', author: 'James R.', role: 'Corporate Client · Manhattan' },
   { quote: "Booked him for my daughter's prom. He showed up 20 minutes early in a spotless Suburban. Highly recommend.", author: 'Maria G.', role: 'Event Client · Brooklyn' },
-  { quote: "Best driver in NYC, period. I've used many services — none compare to the reliability of GoldStar.", author: 'David K.', role: 'Frequent Rider · Queens' },
+  { quote: "Best driver in NYC, period. I've used many services — none compare to the reliability of GoldClass.", author: 'David K.', role: 'Frequent Rider · Queens' },
 ]
 
 export default function Testimonials() {

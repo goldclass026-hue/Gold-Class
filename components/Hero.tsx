@@ -10,10 +10,10 @@ export default function Hero() {
   return (
     <section style={{ position: 'relative', minHeight: '100svh', display: 'flex', flexDirection: 'column', justifyContent: 'center', overflow: 'hidden', backgroundColor: '#0e0e0e' }}>
       <img
-        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80"
+        src="/images/escalade-night.jpg"
         alt=""
         aria-hidden
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.2 }}
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 65%', opacity: 0.2 }}
       />
       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom right, #0e0e0e, rgba(14,14,14,0.9), rgba(26,5,5,0.8))' }} />
 
@@ -67,12 +67,12 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 1.4 }}
           style={{ marginTop: '2.5rem', display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}
         >
-          <a href="tel:+19170000000" className="btn-primary">
+          <a href="tel:+13476352412" className="btn-primary">
             <Phone size={14} />
             Call to Book
           </a>
           <a
-            href="https://wa.me/19170000000?text=Hi%20Abdul%2C%20I%27d%20like%20to%20book%20a%20ride"
+            href="https://wa.me/13476352412?text=Hi%20Abdul%2C%20I%27d%20like%20to%20book%20a%20ride"
             target="_blank"
             rel="noopener noreferrer"
             style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', border: '1px solid #25D366', color: '#25D366', padding: '1rem 2rem', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', fontWeight: 600, textDecoration: 'none', transition: 'background-color 0.2s' }}
